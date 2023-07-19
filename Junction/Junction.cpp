@@ -1,8 +1,11 @@
 #include <iostream>
 #include <clocale>
 
+#include <Windows.h>
+
 void SimpleClac() {
-    ::setlocale(LC_ALL, "RUS");
+    SetConsoleCP(1251); // Кодовая страница для кириллицы (Windows-1251)
+    SetConsoleOutputCP(1251);
     std::cout << "Программа калькулятор\n";
 
     std::cout << "Выберете операцию(введите сивол):"<<
